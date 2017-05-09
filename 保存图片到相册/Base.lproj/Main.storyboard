@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="a.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Ti4-eU-hzn">
+                                <rect key="frame" x="150" y="69" width="300" height="284"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ti4-eU-hzn" secondAttribute="height" multiplier="147:139" id="FsO-TY-sGe"/>
+                                    <constraint firstAttribute="width" constant="300" id="vso-vS-KYx"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ppj-Mg-CgQ">
+                                <rect key="frame" x="20" y="520" width="560" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.50196078430000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="GKb-R7-7UQ"/>
+                                </constraints>
+                                <state key="normal" title="保存相片到相册"/>
+                                <connections>
+                                    <action selector="imageLibrary:" destination="BYZ-38-t0r" eventType="touchUpInside" id="03f-jQ-vAz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqh-RO-gCF">
+                                <rect key="frame" x="20" y="460" width="560" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.50196078430000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dfY-ch-Qr8"/>
+                                </constraints>
+                                <state key="normal" title="保存相片到自定义相册"/>
+                                <connections>
+                                    <action selector="defineImageLibrary:" destination="BYZ-38-t0r" eventType="touchUpInside" id="On9-JW-YIP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ppj-Mg-CgQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="80U-yQ-toh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ppj-Mg-CgQ" secondAttribute="trailing" id="AqM-nn-WxN"/>
+                            <constraint firstItem="Ti4-eU-hzn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="G9C-St-Ohp"/>
+                            <constraint firstItem="Ppj-Mg-CgQ" firstAttribute="top" secondItem="sqh-RO-gCF" secondAttribute="bottom" constant="30" id="Gho-fX-kyo"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="sqh-RO-gCF" secondAttribute="leading" id="Lab-0w-hVN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ppj-Mg-CgQ" secondAttribute="bottom" constant="50" id="QcM-HP-8qA"/>
+                            <constraint firstItem="Ti4-eU-hzn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="49" id="gwz-M0-N9G"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sqh-RO-gCF" secondAttribute="trailing" id="qjA-W5-Aqx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Ti4-eU-hzn" id="5Fc-TQ-3qP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="429"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="a.jpg" width="391" height="220"/>
+    </resources>
+</document>
